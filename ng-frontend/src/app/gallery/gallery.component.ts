@@ -12,19 +12,17 @@ export class GalleryComponent implements OnInit {
   photo_desc : string;
   photo_url : string;
 
-  constructor(private photoService: PhotosService) { }
+  constructor(private photoService: PhotosService) {   }
 
   ngOnInit() {
-
+    this.getImages();
   }
-
+  getImages()
+  {
+    return this.photoService;
+  }
   setPhotoType(photo_category : string)
   {
       this.photo_type = photo_category;
-  }
-
-  get_images()
-  {
-
   }
 }
