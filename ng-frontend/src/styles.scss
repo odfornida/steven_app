@@ -1,11 +1,9 @@
 /* COLORS */
-$color1: #fff;
+$black: #000;
+$color1: rgb(110, 41, 41);
+$color2: rgb(190, 95, 95);
+$colorbg1: rgb(247, 181, 217);
 
 nav {
-  h1 {
-    font-size: 1em;
-    color: $color1;
-  }
-
-
+  background: $colorbg1 !important;
 }
