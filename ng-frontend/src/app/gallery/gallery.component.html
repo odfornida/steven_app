@@ -1,15 +1,15 @@
-<p>gallery works!</p>
-<div class="columns category-cols is-multiline">
+<div class="gallery columns is-multiline">
 
-    <!-- img item -->
-    <!-- we will have to replace results with the category type array-->
-    <!-- <div class="column is-3 grid-item" *ngFor="let item of results; let i = index" (click)="active=i; expanded=true;">
-      <div class="img-container">
-        <img src="{{item.urls.regular}}" alt="">
-      </div>
+  <!-- img item -->
+  <!-- we will have to replace results with the category type array-->
+  <div class="column is-one-third is-vcentered" *ngFor="let photo of photoService.getPhotosForCategory(currCategory); let i=index">
+    <div class="img-container">
+      <img src="{{photo.url}}" alt="{{photo.name}}">
     </div>
   </div>
+</div>
 
+<!--
   <div *ngIf="expanded" class="expanded-img" (keydown.escape)="closeExpandedView()">
     <div (click)="closeExpandedView()" class="expandedBg"></div>
     <div class="img-stuff">
@@ -23,4 +23,4 @@
       <button (click)="next()">next</button>
       <button (click)="closeExpandedView()" class="closeViewBtn">X</button>
     </div> -->
-  </div>
+

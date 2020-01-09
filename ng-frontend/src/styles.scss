@@ -8,17 +8,28 @@ $colorbg1: rgb(255, 255, 255);
 
 body {
   min-height: 100vh;
-  padding: 4em;
   color: $black;
   background: $colorbg1;
   font-family: 'Lato', sans-serif;
 }
 
+.container {
+  padding: 0 12em !important;
+}
+
 nav.navbar {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  padding-left: 4em;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  background-color: rgba(212, 212, 212, 0.6);
+  backdrop-filter: blur(5px);
 
   .navbar-item {
     padding: 0 .7em;
     color: $black;
+    font-size: .7em;
     text-transform: uppercase;
 
     a {
@@ -32,13 +43,37 @@ nav.navbar {
     }
 
     h1 {
-      font-size: 1.3em;
+      font-size: 2.3em;
       letter-spacing: .02em;
       font-family: 'Ibarra Real Nova', serif;
+    }
+
+    &.navbar-divider {
+      width: 1px;
+      padding: 0;
+      margin: 0 1em;
+      height: 100%;
+      background: rgba(0,0,0,0.1);
     }
   }
 }
 
+.bgImg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.gallery.columns {
+  .column {
+    padding: 0;
+  }
+}
+
+
+/* Highlighting colors */
 ::selection {
   background: rgba(0,0,0,0.5); /* WebKit/Blink Browsers */
 }

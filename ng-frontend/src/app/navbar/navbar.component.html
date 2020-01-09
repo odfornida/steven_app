@@ -12,10 +12,12 @@
   </div>
 
   <div class="navbar-menu">
+    <span class="navbar-item navbar-divider"></span>
     <div class="navbar-start">
-      <a routerLinkActive="active" routerLink="/gallery" class="navbar-item">
-        Gallery
-      </a>
+      <a *ngFor="let cat of photoService.getCategories()" class="navbar-item">{{cat}}</a>
+
+      <span class="navbar-item navbar-divider"></span>
+
       <a routerLinkActive="active" routerLink="/about" class="navbar-item">
         About
       </a>
