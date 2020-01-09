@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PhotosService } from '../photos.service';
 
 @Component({
-  selector: 'app-gallery',
+  selector: 'gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss']
 })
