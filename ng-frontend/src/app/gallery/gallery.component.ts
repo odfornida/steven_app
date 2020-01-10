@@ -10,7 +10,6 @@ import { PhotosService } from '../photos.service';
 export class GalleryComponent implements OnInit {
   currCategory = 'headshots';
 
-
   constructor(public photoService: PhotosService, private route: ActivatedRoute) {
   }
 
