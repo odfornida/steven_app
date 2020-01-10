@@ -22,7 +22,7 @@ nav.navbar {
   top: 0;
   width: 100vw;
   padding-left: 4em;
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.07);
   background-color: rgba(212, 212, 212, 0.6);
   backdrop-filter: blur(5px);
 
@@ -32,14 +32,9 @@ nav.navbar {
     font-size: .7em;
     text-transform: uppercase;
 
-    a {
+    &a {
       color: $nearblack;
-
-      &.active, &:hover {
-        color: $black;
-        text-decoration: underline solid $black;
-        background-color: transparent !important;
-      }
+      background-color: red !important;
     }
 
     h1 {
@@ -48,12 +43,24 @@ nav.navbar {
       font-family: 'Ibarra Real Nova', serif;
     }
 
+    &.active, &:hover {
+      &:not(.navbar-title) {
+        color: red !important;
+        background: rgba(0,0,0,0.1);
+        text-decoration: underline solid $black;
+      }
+    }
+
+    &.special {
+      font-weight: bold;
+    }
+
     &.navbar-divider {
       width: 1px;
       padding: 0;
       margin: 0 1em;
       height: 100%;
-      background: rgba(0,0,0,0.1);
+      background: rgba(0,0,0,0.07);
     }
   }
 }
