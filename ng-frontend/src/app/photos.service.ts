@@ -119,22 +119,22 @@ export class PhotosService {
         {
             'name': "accordion",
             'desc': "man playing accordion B&W",
-            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+            'url': "http://vickmark.com/wp-content/uploads/2011/03/12-704-page/ato-headshot(pp_w1251_h834).jpg",
         },
         {
             'name': "in-the-crowd",
             'desc': "man with mic in middle of a crowd",
-            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+            'url': "http://vickmark.com/wp-content/uploads/2011/03/12-704-page/ato-headshot(pp_w1251_h834).jpg",
         },
         {
             'name': "DJ",
             'desc': "DJ at a festival B&W",
-            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+            'url': "http://vickmark.com/wp-content/uploads/2011/03/12-704-page/ato-headshot(pp_w1251_h834).jpg",
         },
         {
             'name': "smoking",
             'desc': "man smoking cigarette",
-            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+            'url': "http://vickmark.com/wp-content/uploads/2011/03/12-704-page/ato-headshot(pp_w1251_h834).jpg",
         },
     ],
     'landscapes': [
@@ -178,10 +178,8 @@ export class PhotosService {
   getCategoryPreviewPhoto() {
     let catPhotos;
     if (this.hoveredNavCategory == null) {
-      console.log('hoveredCat is null');
       catPhotos = this.getPhotosForCategory(this.getCategories()[0]);
     } else {
-      console.log('hoveredCat is NOT null');
       catPhotos = this.getPhotosForCategory(this.hoveredNavCategory);
     }
     return catPhotos[0]; // Select photo from array
