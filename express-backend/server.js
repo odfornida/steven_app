@@ -6,9 +6,16 @@ const bodyParser = require('body-parser')
 const app = express()
 const port = 3200
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
+
 app.get('/images', (req, res) => res.send(db))
 app.post('/people', function(req, res){
     var name = req.body.name;
@@ -19,7 +26,7 @@ app.post('/people', function(req, res){
     res.send(name + ' ' + num + ' ' + email);
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`.blue))
+app.listen(port, () => console.log(`Express backend listening on port ${port}!`.blue))
 
 const db = {
     'headshots': [

@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PhotosService {
 
-  photoApi = 'localhost:3000';
+  photoApi = 'http://localhost:3200/';
   public photos: {};
   public hoveredNavCategory: string = null;
 
@@ -167,6 +167,7 @@ export class PhotosService {
   }
 
   getCategories(): string[] {
+    console.log('getCategories', this.photos);
     return Object.keys(this.photos);
   }
 
@@ -192,12 +193,13 @@ export class PhotosService {
   }
 
   private getPhotos() {
-    // this.http.get<any>(this.photoApi + 'images').toPromise().then(data =>
-    // {
-    //   this.photos = data;
-    //   console.log(this.photos);
-    // });
-    this.photos = this.db;
+    this.http.get<any>(this.photoApi + 'images').toPromise().then(data => {
+      this.photos = data;
+      console.log('getPhotos:', this.photos);
+    });
+    console.log('aaaa');
+
+    // this.photos = this.db;
     return this.photos;
   }
 
