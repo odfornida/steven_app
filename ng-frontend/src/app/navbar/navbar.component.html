@@ -1,6 +1,6 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a routerLink="" class="navbar-item">
+    <a routerLink="" class="navbar-item navbar-title">
       <h1>STEVEN HUANG</h1>
     </a>
 
@@ -13,17 +13,20 @@
 
   <div class="navbar-menu">
     <div class="navbar-start">
+      <span class="navbar-item navbar-divider"></span>
+
       <a *ngFor="let cat of photoService.getCategories()" [routerLink]="['/gallery', cat]" class="navbar-item">{{cat}}</a>
 
       <span class="navbar-item navbar-divider"></span>
+
+      <a routerLinkActive="active" routerLink="/contact" class="navbar-item special">
+        Book now
+      </a>
 
       <a routerLinkActive="active" routerLink="/about" class="navbar-item">
         About
       </a>
 
-      <a routerLinkActive="active" routerLink="/contact" class="navbar-item">
-        Contact
-      </a>
 
       <!-- <div class="navbar-item">
         <a class="button is-light">Admin</a>
