@@ -1,6 +1,6 @@
 /* COLORS */
 $black: #000;
-$nearblack: #333;
+$nearblack: #666;
 $white: #fff;
 $color1: rgb(110, 41, 41);
 $color2: rgb(189, 247, 255);
@@ -28,26 +28,15 @@ nav.navbar {
 
   .navbar-item {
     padding: 0 .7em;
-    color: $black;
+    color: $nearblack;
     font-size: .7em;
     text-transform: uppercase;
 
-    &a {
-      color: $nearblack;
-      background-color: red !important;
-    }
-
-    h1 {
-      font-size: 2.3em;
-      letter-spacing: .02em;
-      font-family: 'Ibarra Real Nova', serif;
-    }
-
     &.active, &:hover {
       &:not(.navbar-title) {
-        color: red !important;
-        background: rgba(0,0,0,0.1);
-        text-decoration: underline solid $black;
+        color: $black;
+        // background: rgba(0,0,0,0.1);
+        background: none;
       }
     }
 
@@ -61,6 +50,13 @@ nav.navbar {
       margin: 0 1em;
       height: 100%;
       background: rgba(0,0,0,0.07);
+    }
+
+    h1 {
+      color: $black;
+      font-size: 2.3em;
+      letter-spacing: .02em;
+      font-family: 'Ibarra Real Nova', serif;
     }
   }
 }
@@ -92,5 +88,5 @@ nav.navbar {
 label {
   color: $black;
   font-family: 'Lato', sans-serif;
-  
+
 }
