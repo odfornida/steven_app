@@ -28,15 +28,14 @@
   <div class="field">
     <label class="label">Email</label>
     <div class="control">
-      <input class="input is-success" type="email" placeholder="johndoe@email.com">
-      <span class="icon is-small is-left">
-        <i class="fas fa-envelope"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-check"></i>
-      </span>
+      <input
+      (input)="inputChanged()"
+      (input)="user_input=$event.target.value"
+      [className]="validEmail ? 'input is-success' : 'input is-danger'" 
+      class="input"
+      type="email"
+      placeholder="johndoe@email.com">
     </div>
-    <p class="help is-success"></p>
   </div>
   
   <div class="field">
@@ -44,7 +43,7 @@
     <div class="control">
       <div class="select">
         <select>
-          <option *ngFor = "let cat of photoService.getCategories()">{{cat}}</option>
+          <option *ngFor = "let cat of photoService.getCategories()">{{cat | titlecase}}</option>
           <option>Other</option>
         </select>
       </div>
