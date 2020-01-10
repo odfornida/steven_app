@@ -80,3 +80,9 @@ nav.navbar {
 ::-moz-selection {
   background: rgba(0,0,0,0.5); /* Gecko Browsers */
 }
+
+label {
+  color: $black;
+  font-family: 'Lato', sans-serif;
+  
+}

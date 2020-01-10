@@ -1,8 +1,10 @@
 const express = require('express')
 const colors = require('colors')
+const cors = require('cors')
 const app = express()
-const port = 3000
+const port = 3200
 
+app.use(cors())
 app.get('/images', (req, res) => res.send(db))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`.blue))
