@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PhotosService } from '../photos.service';
 
 @Component({
   selector: 'contact',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(public photoService: PhotosService) { }
 
   ngOnInit() {
+    console.log(this.photoService.getCategories())
   }
 
 }
