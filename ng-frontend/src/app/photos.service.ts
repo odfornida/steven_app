@@ -114,7 +114,7 @@ export class PhotosService {
 'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
 },
     ],
-    'dataing_profile': [
+    'dating profiles': [
         {
             'name': "accordion",
             'desc': "man playing accordion B&W",
@@ -136,7 +136,7 @@ export class PhotosService {
             'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
         },
     ],
-    'landscaps': [
+    'landscapes': [
         {
             'name': "ballo0n",
             'desc': "hot-air balloons in front of sunset",

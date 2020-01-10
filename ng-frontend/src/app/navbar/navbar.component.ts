@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private photoService: PhotosService) { }
+  constructor(public photoService: PhotosService) { }
 
   ngOnInit() {
   }
