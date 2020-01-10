@@ -1,2 +1,7 @@
-<a routerLink="/gallery">Enter Gallery **make pretty</a>
-<img src="https://miro.medium.com/max/4320/0*QNdQhs_T3ffa6B0m.jpeg" class="bg-img">
+<img src="{{photoService.getCategoryPreviewPhoto().url}}" class="bg-img">
+<div class="home-overlay">
+  <h2>Professional photography</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, suscipit ut incidunt distinctio dolores reprehenderit, harum velit eaque ipsam consequatur quibusdam labore voluptate beatae provident tenetur aspernatur ad alias minima.</p>
+  <a routerLink="/gallery/{{photoService.getCategories()[0]}}" class="button">Enter gallery</a>
+  <a routerLink="/contact" class="button">Contact</a>
+</div>

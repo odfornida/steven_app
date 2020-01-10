@@ -9,7 +9,8 @@ import { PhotosService } from '../photos.service';
 })
 export class GalleryComponent implements OnInit {
   currCategory = 'headshots';
-
+  active: number; // Index of currently expanded image, if any
+  expanded = false;
 
   constructor(public photoService: PhotosService, private route: ActivatedRoute) {
   }
@@ -23,5 +24,29 @@ export class GalleryComponent implements OnInit {
         }
       });
     });
+  }
+
+  getPhotos() {
+    return this.photoService.getPhotosForCategory(this.currCategory);
+  }
+
+  next() {
+    if (this.active < this.getPhotos().length - 1) {
+      this.active++;
+    } else if (this.getPhotos().length !== 0) {
+      this.active = 0;
+    }
+  }
+
+  prev() {
+    if (this.active === 0) {
+      this.active = this.getPhotos().length - 1;
+    } else {
+      this.active--;
+    }
+  }
+
+  closeExpandedView() {
+    this.expanded = false;
   }
 }

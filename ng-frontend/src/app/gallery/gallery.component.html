@@ -1,26 +1,24 @@
 <div class="gallery columns is-multiline">
 
   <!-- img item -->
-  <!-- we will have to replace results with the category type array-->
-  <div class="column is-one-third is-vcentered" *ngFor="let photo of photoService.getPhotosForCategory(currCategory); let i=index">
+  <div class="column is-one-third is-vcentered" *ngFor="let photo of getPhotos(); let i=index" (click)="active=i; expanded=true;">
     <div class="img-container">
       <img src="{{photo.url}}" alt="{{photo.name}}">
     </div>
   </div>
 </div>
 
-<!--
-  <div *ngIf="expanded" class="expanded-img" (keydown.escape)="closeExpandedView()">
-    <div (click)="closeExpandedView()" class="expandedBg"></div>
-    <div class="img-stuff">
-      <img src="{{results[active].urls.regular}}" alt="">  <p>{{results[active].description}}</p>
-      <a *ngIf="results[active].user?.portfolio_url" target="_blank" href="{{results[active].user.portfolio_url}}" class="bold_link">See
-        More from
-        {{results[active].user?.username}}</a>
-    </div>
-    <div class="toolbar">
-      <button (click)="prev()">previous</button>
-      <button (click)="next()">next</button>
-      <button (click)="closeExpandedView()" class="closeViewBtn">X</button>
-    </div> -->
-
+<div *ngIf="expanded" class="expanded-img" (keydown.escape)="closeExpandedView()">
+  <div (click)="closeExpandedView()" class="expanded-bg"></div>
+  <div class="img-stuff">
+    <img src="{{getPhotos()[active].url}}">  <p>{{getPhotos()[active].description}}</p>
+    <a *ngIf="getPhotos()[active].user?.portfolio_url" target="_blank" href="{{getPhotos()[active].user.portfolio_url}}" class="bold_link">See
+      More from
+      {{getPhotos()[active].user?.username}}</a>
+  </div>
+  <div class="toolbar">
+    <button (click)="prev()">previous</button>
+    <button (click)="next()">next</button>
+    <button (click)="closeExpandedView()" class="closeViewBtn">X</button>
+  </div>
+</div>

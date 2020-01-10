@@ -1,16 +1,26 @@
 /* COLORS */
 $black: #000;
-$nearblack: #333;
+$nearblack: #444;
 $white: #fff;
 $color1: rgb(110, 41, 41);
 $color2: rgb(189, 247, 255);
 $colorbg1: rgb(255, 255, 255);
+$colorglass: rgba(255, 255, 255, 0.7);
 
 body {
   min-height: 100vh;
   color: $black;
   background: $colorbg1;
   font-family: 'Lato', sans-serif;
+
+  h1 {
+    font-size: 2.3em;
+    letter-spacing: .02em;
+    font-family: 'Ibarra Real Nova', serif;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
 }
 
 .container {
@@ -28,7 +38,7 @@ nav.navbar {
 
   .navbar-item {
     padding: 0 .7em;
-    color: $black;
+    color: $nearblack;
     font-size: .7em;
     text-transform: uppercase;
 
@@ -55,35 +65,85 @@ nav.navbar {
       height: 100%;
       background: rgba(0,0,0,0.1);
     }
+
+    h1 {
+      color: $black;
+    }
   }
 }
 
-.bg-img {
+home {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   max-width: 100vw;
-  object-fit: cover;
-}
 
-.gallery.columns {
-  .column {
-    padding: 0;
+  .bg-img {
+    object-fit: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100%;
+    height: auto;
+  }
+
+  .home-overlay {
+    bottom: 5em;
+    position: fixed;
+    width: 50%;
+    padding: 3em;
+    color: #222;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.07);
+    background-color: $colorglass;
+    backdrop-filter: blur(5px);
+
+    .button {
+      border-radius: 0;
+      border: none;
+      margin: 0.5em;
+      color: $black;
+      background: rgba(0,0,0,0.1);
+
+      &:hover { background: rgba(0,0,0,0.2); }
+    }
   }
 }
 
 
-/* Highlighting colors */
+gallery {
+  .columns {
+    .column {
+      padding: 0.5em;
+      cursor: pointer;
+    }
+  }
+
+  .expanded-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    .expanded-bg {
+      background: rgba(0,0,0,0.5);
+      width: 100%;
+      height: 100%;
+    }
+
+    .img-stuff {
+      img {
+
+      }
+    }
+  }
+}
+
+
+/* Text highlighting colors */
 ::selection {
   background: rgba(0,0,0,0.5); /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
   background: rgba(0,0,0,0.5); /* Gecko Browsers */
-}
-
-label {
-  color: $black;
-  font-family: 'Lato', sans-serif;
-  
 }

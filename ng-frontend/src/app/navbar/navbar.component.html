@@ -13,7 +13,13 @@
 
   <div class="navbar-menu">
     <div class="navbar-start">
+<<<<<<< HEAD
       <a *ngFor="let cat of photoService.getCategories()" [routerLink]="['/gallery', cat]" class="navbar-item">{{cat}}</a>
+=======
+      <span class="navbar-item navbar-divider"></span>
+
+      <a *ngFor="let cat of photoService.getCategories()"  (mouseover)="photoService.setHoveredNavCategory($event)" routerLinkActive="active" [routerLink]="['/gallery', cat]" class="navbar-item">{{cat}}</a>
+>>>>>>> c9ad08f532e412df439744a27b3983c510bce52b
 
       <span class="navbar-item navbar-divider"></span>
 

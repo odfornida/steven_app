@@ -1,11 +1,23 @@
 const express = require('express')
 const colors = require('colors')
 const cors = require('cors')
+const bodyParser = require('body-parser')
+
 const app = express()
 const port = 3200
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
 app.get('/images', (req, res) => res.send(db))
+app.post('/people', function(req, res){
+    var name = req.body.name;
+    var num = req.body.num;
+    var email = req.body.email;
+    console.log(req);
+
+    res.send(name + ' ' + num + ' ' + email);
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`.blue))
 

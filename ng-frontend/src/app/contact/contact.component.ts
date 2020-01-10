@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChange, Input } from '@angular/core';
 import { PhotosService } from '../photos.service';
+import { FormControl, Validators, NgModel } from '@angular/forms';
+
 
 @Component({
   selector: 'contact',
@@ -7,11 +9,26 @@ import { PhotosService } from '../photos.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  @Input() user_input: string;
+  validEmail: boolean = false;
 
   constructor(public photoService: PhotosService) { }
-
+  
   ngOnInit() {
-    console.log(this.photoService.getCategories())
+  }
+
+  ngOnChanges() {
+  }
+
+  inputChanged() {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    this.validEmail = re.test(String(this.user_input).toLowerCase());
+    //console.log(this.validEmail, this.user_input);
+  }
+
+
+  getCapitalizedCat(){
+
   }
 
 }
