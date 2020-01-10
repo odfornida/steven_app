@@ -12,9 +12,8 @@
   </div>
 
   <div class="navbar-menu">
-    <span class="navbar-item navbar-divider"></span>
     <div class="navbar-start">
-      <a *ngFor="let cat of photoService.getCategories()" class="navbar-item">{{cat}}</a>
+      <a *ngFor="let cat of photoService.getCategories()" [routerLink]="['/gallery', cat]" class="navbar-item">{{cat}}</a>
 
       <span class="navbar-item navbar-divider"></span>
 
