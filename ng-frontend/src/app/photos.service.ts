@@ -1,6 +1,7 @@
 import { Injectable, getDebugNode } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { resolve } from 'url';
 
 
 @Injectable({
@@ -11,155 +12,6 @@ export class PhotosService {
   photoApi = 'http://localhost:3200/';
   public photos: {};
   public hoveredNavCategory: string = null;
-
-  db = {
-    'headshots': [
-      {
-        'name': "B&W",
-        'desc': "black and white headshot of a man",
-        'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-    },
-    {
-        'name': "Lion",
-        'desc': "headshot of lion",
-        'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-    },
-    {
-        'name': "sunset",
-        'desc': "headshot of a girl at sunset",
-        'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-    },
-    {
-        'name': "profile",
-        'desc': "headshot of a man in profile view",
-        'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-    },
-    {
-      'name': "B&W",
-      'desc': "black and white headshot of a man",
-      'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-  },
-  {
-      'name': "Lion",
-      'desc': "headshot of lion",
-      'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-  },
-  {
-      'name': "sunset",
-      'desc': "headshot of a girl at sunset",
-      'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-  },
-  {
-      'name': "profile",
-      'desc': "headshot of a man in profile view",
-      'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-  },
-  {
-    'name': "B&W",
-    'desc': "black and white headshot of a man",
-    'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-    'name': "Lion",
-    'desc': "headshot of lion",
-    'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-    'name': "sunset",
-    'desc': "headshot of a girl at sunset",
-    'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-    'name': "profile",
-    'desc': "headshot of a man in profile view",
-    'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-  'name': "B&W",
-  'desc': "black and white headshot of a man",
-  'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-  'name': "Lion",
-  'desc': "headshot of lion",
-  'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-  'name': "sunset",
-  'desc': "headshot of a girl at sunset",
-  'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-  'name': "profile",
-  'desc': "headshot of a man in profile view",
-  'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-'name': "B&W",
-'desc': "black and white headshot of a man",
-'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-'name': "Lion",
-'desc': "headshot of lion",
-'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-'name': "sunset",
-'desc': "headshot of a girl at sunset",
-'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-'name': "profile",
-'desc': "headshot of a man in profile view",
-'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-    ],
-    'dating profiles': [
-        {
-            'name': "accordion",
-            'desc': "man playing accordion B&W",
-            'url': "http://vickmark.com/wp-content/uploads/2011/03/12-704-page/ato-headshot(pp_w1251_h834).jpg",
-        },
-        {
-            'name': "in-the-crowd",
-            'desc': "man with mic in middle of a crowd",
-            'url': "http://vickmark.com/wp-content/uploads/2011/03/12-704-page/ato-headshot(pp_w1251_h834).jpg",
-        },
-        {
-            'name': "DJ",
-            'desc': "DJ at a festival B&W",
-            'url': "http://vickmark.com/wp-content/uploads/2011/03/12-704-page/ato-headshot(pp_w1251_h834).jpg",
-        },
-        {
-            'name': "smoking",
-            'desc': "man smoking cigarette",
-            'url': "http://vickmark.com/wp-content/uploads/2011/03/12-704-page/ato-headshot(pp_w1251_h834).jpg",
-        },
-    ],
-    'landscapes': [
-        {
-            'name': "ballo0n",
-            'desc': "hot-air balloons in front of sunset",
-            'url': "https://miro.medium.com/max/4320/0*QNdQhs_T3ffa6B0m.jpeg",
-        },
-        {
-            'name': "purple-haze",
-            'desc': "lavender bushes",
-            'url': "https://miro.medium.com/max/4320/0*QNdQhs_T3ffa6B0m.jpeg",
-        },
-        {
-            'name': "body of water",
-            'desc': "bust in a pool",
-            'url': "https://miro.medium.com/max/4320/0*QNdQhs_T3ffa6B0m.jpeg",
-        },
-        {
-            'name': "pines",
-            'desc': "green forest and fog",
-            'url': "https://miro.medium.com/max/4320/0*QNdQhs_T3ffa6B0m.jpeg",
-        },
-    ]
-  };
 
   constructor(private http: HttpClient) {
     this.getPhotos();
@@ -193,14 +45,12 @@ export class PhotosService {
   }
 
   private getPhotos() {
-    this.http.get<any>(this.photoApi + 'images').toPromise().then(data => {
+    return this.http.get<any>(this.photoApi + 'images').toPromise().then(data => {
       this.photos = data;
       console.log('getPhotos:', this.photos);
     });
-    console.log('aaaa');
 
-    // this.photos = this.db;
-    return this.photos;
+    //return this.photos;
   }
 
 }

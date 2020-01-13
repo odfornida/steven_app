@@ -1,4 +1,9 @@
-<div class="gallery columns is-multiline">
+<div class="category-info">
+  <p>Here goes information about {{currCategory | uppercase}}, as well as pricing information</p>
+  <a routerLink="/contact" class=".btn">Book now</a>
+</div>
+
+<div *ngIf="getPhotos()?.length" class="gallery columns is-multiline">
 
   <!-- img item -->
   <div class="column is-one-third is-vcentered" *ngFor="let photo of getPhotos(); let i=index" (click)="active=i; expanded=true;">

@@ -29,109 +29,109 @@ app.post('/people', function(req, res){
 app.listen(port, () => console.log(`Express backend listening on port ${port}!`.blue))
 
 const db = {
-    'headshots': [
-      {
-        'name': "B&W",
-        'desc': "black and white headshot of a man",
-        'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-    },
-    {
-        'name': "Lion",
-        'desc': "headshot of lion",
-        'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-    },
-    {
-        'name': "sunset",
-        'desc': "headshot of a girl at sunset",
-        'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-    },
-    {
-        'name': "profile",
-        'desc': "headshot of a man in profile view",
-        'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-    },
-    {
-      'name': "B&W",
-      'desc': "black and white headshot of a man",
-      'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-  },
-  {
-      'name': "Lion",
-      'desc': "headshot of lion",
-      'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-  },
-  {
-      'name': "sunset",
-      'desc': "headshot of a girl at sunset",
-      'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-  },
-  {
-      'name': "profile",
-      'desc': "headshot of a man in profile view",
-      'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-  },
-  {
-    'name': "B&W",
-    'desc': "black and white headshot of a man",
-    'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-    'name': "Lion",
-    'desc': "headshot of lion",
-    'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-    'name': "sunset",
-    'desc': "headshot of a girl at sunset",
-    'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-    'name': "profile",
-    'desc': "headshot of a man in profile view",
-    'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-  'name': "B&W",
-  'desc': "black and white headshot of a man",
-  'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-  'name': "Lion",
-  'desc': "headshot of lion",
-  'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-  'name': "sunset",
-  'desc': "headshot of a girl at sunset",
-  'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-  'name': "profile",
-  'desc': "headshot of a man in profile view",
-  'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-'name': "B&W",
-'desc': "black and white headshot of a man",
-'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-'name': "Lion",
-'desc': "headshot of lion",
-'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-'name': "sunset",
-'desc': "headshot of a girl at sunset",
-'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
-{
-'name': "profile",
-'desc': "headshot of a man in profile view",
-'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
-},
+    'corporate': [
+        {
+            'name': "B&W",
+            'desc': "black and white headshot of a man",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "Lion",
+            'desc': "headshot of lion",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "sunset",
+            'desc': "headshot of a girl at sunset",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "profile",
+            'desc': "headshot of a man in profile view",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "B&W",
+            'desc': "black and white headshot of a man",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "Lion",
+            'desc': "headshot of lion",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "sunset",
+            'desc': "headshot of a girl at sunset",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "profile",
+            'desc': "headshot of a man in profile view",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "B&W",
+            'desc': "black and white headshot of a man",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "Lion",
+            'desc': "headshot of lion",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "sunset",
+            'desc': "headshot of a girl at sunset",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "profile",
+            'desc': "headshot of a man in profile view",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "B&W",
+            'desc': "black and white headshot of a man",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "Lion",
+            'desc': "headshot of lion",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "sunset",
+            'desc': "headshot of a girl at sunset",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "profile",
+            'desc': "headshot of a man in profile view",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "B&W",
+            'desc': "black and white headshot of a man",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "Lion",
+            'desc': "headshot of lion",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "sunset",
+            'desc': "headshot of a girl at sunset",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
+        {
+            'name': "profile",
+            'desc': "headshot of a man in profile view",
+            'url': "https://car-images.bauersecure.com/pagefiles/8181/bmw_xdrive_050.jpg",
+        },
     ],
-    'dating profiles': [
+    'tinder pics': [
         {
             'name': "accordion",
             'desc': "man playing accordion B&W",
@@ -153,7 +153,7 @@ const db = {
             'url': "http://vickmark.com/wp-content/uploads/2011/03/12-704-page/ato-headshot(pp_w1251_h834).jpg",
         },
     ],
-    'landscapes': [
+    'social media': [
         {
             'name': "ballo0n",
             'desc': "hot-air balloons in front of sunset",

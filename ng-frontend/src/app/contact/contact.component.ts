@@ -9,11 +9,18 @@ import { FormControl, Validators, NgModel } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  @Input() user_input: string;
-  validEmail: boolean = false;
+  @Input() emailInput: string;
+  validEmail = false;
+  formData = {
+    name: '',
+    number: '',
+    email: '',
+    subject: '',
+    message: ''
+  };
 
   constructor(public photoService: PhotosService) { }
-  
+
   ngOnInit() {
   }
 
@@ -22,13 +29,13 @@ export class ContactComponent implements OnInit {
 
   inputChanged() {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    this.validEmail = re.test(String(this.user_input).toLowerCase());
+    this.validEmail = re.test(String(this.emailInput).toLowerCase());
     //console.log(this.validEmail, this.user_input);
   }
 
-
-  getCapitalizedCat(){
-
+  submitForm() {
+    console.log('formData = ', this.formData);
+    //this.http.post('http://someurl', JSON.stringify(this.formData))/*.subscribe(...)*/;
   }
 
 }
